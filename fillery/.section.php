@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Филлеры";
+$arDirProperties = Array(
+
+);
+?>
