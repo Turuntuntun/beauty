@@ -1,0 +1,10 @@
+bitrix/
+upload/
+images/
+*.jp?g
+*.png
+*.gif
+*.svg
+*.pdf
+*.xls?
+.htaccess
