@@ -1,7 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
-
+$APPLICATION->SetTitle("Главная")
 ?>
     <section class="slider-banner swiper-container">
         <div class="slider-banner-wrap swiper-wrapper">

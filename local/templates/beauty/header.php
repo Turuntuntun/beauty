@@ -1,11 +1,11 @@
-<?
+<?if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("");
 ?>
     <!DOCTYPE html>
-    <html>
+    <html lang="<?=LANGUAGE_ID?>">
     <head>
-        <meta charset="utf-8">
+        <meta charset="<?= SITE_CHARSET ?>">
+        <title><?$APPLICATION->ShowTitle() ?></title>
         <?php
         $APPLICATION->ShowMeta("robots");
         $APPLICATION->ShowMeta("description");
@@ -18,8 +18,6 @@ $APPLICATION->SetTitle("");
             $APPLICATION->ShowCSS(true);
         }
         ?>
-        <meta content="" name="description">
-        <meta content="" name="keywords">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="ie=edge" http-equiv="x-ua-compatible">
         <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -40,7 +38,7 @@ $APPLICATION->SetTitle("");
         </div>
         <header class="header">
             <div class="mycontainer">
-                <a class="header__logo" href="main.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                <a class="header__logo" href="/"><img src=<?=SITE_TEMPLATE_PATH ."/assets/images/logo.png"?> alt="Logo"></a>
                 <button class="header__toggle">
                     <span class="header__toggle-middle"></span>
                 </button>
