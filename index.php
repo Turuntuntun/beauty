@@ -429,29 +429,68 @@ $APPLICATION->SetTitle("Главная")
 		</div>
 	</div>
 </div>
- </section> <section class="about margin-block">
-<div class="mycontainer">
-	<div class="h2title">
-		 О нашей деятельности
-	</div>
-	<div class="about-content">
-		<div class="about__img">
- <img src="assets/images/about.jpg" alt="">
-		</div>
-		<div class="about-info">
-			<div class="about-info__title">
-				 О компании
-			</div>
-			<div class="about-info__text">
-				 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione minus dolores assumenda velit voluptates itaque quasi modi aliquam nesciunt? Quisquam debitis molestiae suscipit placeat vitae dolorem tempora architecto voluptatem nihil quibusdam, ullam error? Vel hic voluptatum iure reprehenderit autem eaque! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, blanditiis.<br>
- <br>
-				 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi soluta voluptate totam provident perferendis accusamus delectus nulla voluptatem temporibus. Exercitationem consectetur voluptatem a dolore incidunt, nulla, autem nam consequuntur, excepturi quasi atque. Quia, asperiores nesciunt mollitia, esse reprehenderit dolor, nam labore dolores molestias repellat magnam dolore sed vitae tenetur. Incidunt deleniti totam rem nobis eaque molestias fugiat magnam tempora commodi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum dicta obcaecati quae ex illo reiciendis, consequatur eligendi quod earum!<br>
- <br>
-				 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium autem, quisquam aperiam soluta culpa incidunt provident, dignissimos temporibus esse officiis pariatur? Adipisci cum totam, qui aliquam perspiciatis ipsa delectus?
-			</div>
- <a class="about-info__btn" href="#">
-			Подробнее</a>
-		</div>
-	</div>
-</div>
- </section> <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ </section>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.detail", 
+	"main_about", 
+	array(
+		"COMPONENT_TEMPLATE" => "main_about",
+		"IBLOCK_TYPE" => "content",
+		"IBLOCK_ID" => "10",
+		"ELEMENT_ID" => "",
+		"ELEMENT_CODE" => "about",
+		"CHECK_DATES" => "Y",
+		"FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "PREVIEW_TEXT",
+			2 => "PREVIEW_PICTURE",
+			3 => "DETAIL_TEXT",
+			4 => "",
+		),
+		"PROPERTY_CODE" => array(
+			0 => "UF_LINK",
+			1 => "",
+		),
+		"IBLOCK_URL" => "",
+		"DETAIL_URL" => "",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_GROUPS" => "Y",
+		"SET_TITLE" => "N",
+		"SET_CANONICAL_URL" => "N",
+		"SET_BROWSER_TITLE" => "N",
+		"BROWSER_TITLE" => "-",
+		"SET_META_KEYWORDS" => "Y",
+		"META_KEYWORDS" => "-",
+		"SET_META_DESCRIPTION" => "Y",
+		"META_DESCRIPTION" => "-",
+		"SET_LAST_MODIFIED" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"USE_PERMISSIONS" => "N",
+		"STRICT_SECTION_CHECK" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"USE_SHARE" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Страница",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SET_STATUS_404" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => ""
+	),
+	false
+);?> <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
