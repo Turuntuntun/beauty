@@ -33,7 +33,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
     <div class="wrapper">
         <div class="uphead">
             <div class="mycontainer">
-                <nav class="uphead-menu"><a class="uphead-menu__link uphead-menu__link_active" href="#">Оплата и доставка</a></nav>
+                <nav class="uphead-menu"><a class="uphead-menu__link uphead-menu__link_active" href="/about_pay">Оплата и доставка</a></nav>
             </div>
         </div>
         <header class="header">
