@@ -2,7 +2,8 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
 $APPLICATION->SetTitle("Главная")
-?><?$APPLICATION->IncludeComponent("bitrix:news.list", "main_banner", Array(
+?>
+<?$APPLICATION->IncludeComponent("bitrix:news.list", "main_banner", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
 		"IBLOCK_ID" => "9",	// Код информационного блока
@@ -64,44 +65,37 @@ $APPLICATION->SetTitle("Главная")
 	),
 	false
 );?>
-    
-<div class="mycontainer">
-	<div class="h2title">
-		 Категории
-	</div>
-	<div class="categories-items">
- <a class="categories-card" href="#" style="background-image: url(assets/images/category1.png)">
-		<div class="categories-card__title">
-			 Средства индивидуальной защиты
-		</div>
- </a><a class="categories-card" href="#" style="background-image: url(assets/images/category2.png)">
-		<div class="categories-card__title">
-			 Бахилы
-		</div>
- </a><a class="categories-card" href="#" style="background-image: url(assets/images/category3.png)">
-		<div class="categories-card__title">
-			 Халаты одноразовые
-		</div>
- </a><a class="categories-card" href="#" style="background-image: url(assets/images/category4.png)">
-		<div class="categories-card__title">
-			 Перчатки одноразовые
-		</div>
- </a><a class="categories-card" href="#" style="background-image: url(assets/images/category5.png)">
-		<div class="categories-card__title">
-			 Шапочки одноразовые
-		</div>
- </a><a class="categories-card" href="#" style="background-image: url(assets/images/category6.png)">
-		<div class="categories-card__title">
-			 Маски одноразовые
-		</div>
- </a><a class="categories-card" href="#" style="background-image: url(assets/images/category7.png)">
-		<div class="categories-card__title">
-			 Антисептики и&nbsp;дезинфекторы
-		</div>
- </a>
-	</div>
-</div>
- </section> <section class="cards margin-block slider4">
+<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "main_category", Array(
+    "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+    "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+    "CACHE_GROUPS" => "Y",	// Учитывать права доступа
+    "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+    "CACHE_TYPE" => "A",	// Тип кеширования
+    "COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
+    "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",	// Показывать количество
+    "FILTER_NAME" => "sectionsFilter",	// Имя массива со значениями фильтра разделов
+    "IBLOCK_ID" => "7",	// Инфоблок
+    "IBLOCK_TYPE" => "catalog",	// Тип инфоблока
+    "SECTION_CODE" => "",	// Код раздела
+    "SECTION_FIELDS" => array(	// Поля разделов
+        0 => "",
+        1 => "",
+    ),
+    "SECTION_ID" => "",	// ID раздела
+    "SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+    "SECTION_USER_FIELDS" => array(	// Свойства разделов
+        0 => "",
+        1 => "",
+    ),
+    "SHOW_PARENT_NAME" => "Y",	// Показывать название раздела
+    "TOP_DEPTH" => "1",	// Максимальная отображаемая глубина разделов
+    "VIEW_MODE" => "LINE",	// Вид списка подразделов
+    "COMPONENT_TEMPLATE" => ".default"
+),
+    false
+);?>
+   <section class="cards margin-block slider4">
+
 <div class="mycontainer">
 	<div class="cards-top">
 		<div class="h2title">
