@@ -97,13 +97,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                         </svg></a></div>
             </div>
         </header>
-        <div class="breadcrumbs">
-            <div class="mycontainer"><a class="breadcrumbs__item" href="#">Главная</a><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L4 4.5L1 8" stroke="#B5B5B5"/>
-                </svg><a class="breadcrumbs__item" href="#">Каталог</a><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L4 4.5L1 8" stroke="#B5B5B5"/>
-                </svg>
-                <div class="breadcrumbs__item">Филлер PRINCESS Rich</div>
-            </div>
-        </div>
+        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "beauty", Array(
+            "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+            "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+            "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+        ),
+            false
+        );?>
         <div class="content">
