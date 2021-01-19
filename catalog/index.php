@@ -58,6 +58,7 @@ $APPLICATION->SetTitle("Каталог");
 		"PRODUCT_ID_VARIABLE" => "id",
 		"USE_COMPARE" => "N",
 		"PRICE_CODE" => array(
+			0 => "BASE",
 		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",
