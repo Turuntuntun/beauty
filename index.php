@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
-$APPLICATION->SetTitle("Главная")
+$APPLICATION->SetTitle("Главная");?>
 <?$APPLICATION->IncludeComponent("bitrix:news.list", "main_banner", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
