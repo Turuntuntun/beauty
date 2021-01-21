@@ -14,7 +14,7 @@ if(CModule::IncludeModule('iblock'))
     ;
     $dbIBlock = CIBlock::GetList(array('SORT' => 'ASC', 'ID' => 'ASC'), $arFilter);
     $dbIBlock = new CIBlockResult($dbIBlock);
-    
+
     if ($arIBlock = $dbIBlock->GetNext())
     {
 
@@ -34,13 +34,13 @@ if(CModule::IncludeModule('iblock'))
                 "CACHE_TYPE" => "N",
             ), false, Array('HIDE_ICONS' => 'Y'));
         }
-        
+
     }
 
     if(defined("BX_COMP_MANAGED_CACHE"))
         $GLOBALS["CACHE_MANAGER"]->RegisterTag("iblock_id_new");
 }
 
-$aMenuLinks = array_merge($aMenuLinks, $aMenuLinksExt);
+$aMenuLinks = array_merge($aMenuLinksExt,$aMenuLinks );
 
 ?>
