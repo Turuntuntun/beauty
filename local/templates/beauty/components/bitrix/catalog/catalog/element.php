@@ -29,8 +29,8 @@ else
 
 $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEBAR_PATH']));
 ?>
-<div class='row'>
-	<div class='<?=($isSidebar ? 'col-md-9 col-sm-8' : 'col-xs-12')?>'>
+
+	
 		<?
 		if ($arParams["USE_COMPARE"] === "Y")
 		{
@@ -222,7 +222,7 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 
 		$elementId = $APPLICATION->IncludeComponent(
 			'bitrix:catalog.element',
-			'',
+			'catalog',
 			$componentElementParams,
 			$component
 		);
@@ -435,10 +435,13 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 				if (!isset($arParams['DETAIL_SHOW_POPULAR']) || $arParams['DETAIL_SHOW_POPULAR'] != 'N')
 				{
 					?>
-					<div class='row'>
-						<div class='col-xs-12' data-entity="parent-container">
-							<div class="catalog-block-header" data-entity="header" data-showed="false" style="display: none; opacity: 0;">
-								<?=GetMessage('CATALOG_POPULAR_IN_SECTION')?>
+
+                    <section class="cards margin-block slider4">
+                        <div class="mycontainer">
+                            <div class="cards-top">
+                                <div class="h2title">
+                                    <?=GetMessage('CATALOG_POPULAR_IN_SECTION')?>
+                                </div>
 							</div>
 							<?
 							$APPLICATION->IncludeComponent(
@@ -558,8 +561,8 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 								$component
 							);
 							?>
-						</div>
-					</div>
+                        </div>
+                    </section>
 					<?
 				}
 
@@ -583,6 +586,5 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 				array('HIDE_ICONS' => 'Y')
 			);
 			?>
-		</div>
+
 	<? endif ?>
-</div>

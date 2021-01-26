@@ -85,10 +85,29 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="header-menu-item"><a class="header-menu-item__link" href="#">Акции</a></div>
                     <div class="header-menu-item"><a class="header-menu-item__link" href="#">Контакты</a></div>
                 </div>
-                <div class="header-info"><a class="header-info__mail" href="mailto:admin@beatu-guard.ru">admin@beatu-guard.ru</a><a class="header-info__icon header-info__icon_basket" href="#">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1H4.27273L6.46545 11.8395C6.54027 12.2122 6.7452 12.547 7.04436 12.7853C7.34351 13.0236 7.71784 13.1501 8.10182 13.1428H16.0545C16.4385 13.1501 16.8129 13.0236 17.112 12.7853C17.4112 12.547 17.6161 12.2122 17.6909 11.8395L19 5.04762H5.09091M8.36363 17.1905C8.36363 17.6376 7.99732 18 7.54545 18C7.09358 18 6.72727 17.6376 6.72727 17.1905C6.72727 16.7434 7.09358 16.381 7.54545 16.381C7.99732 16.381 8.36363 16.7434 8.36363 17.1905ZM17.3636 17.1905C17.3636 17.6376 16.9973 18 16.5455 18C16.0936 18 15.7273 17.6376 15.7273 17.1905C15.7273 16.7434 16.0936 16.381 16.5455 16.381C16.9973 16.381 17.3636 16.7434 17.3636 17.1905Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg><span>3</span></a><a class="header-info__icon header-info__icon_search" href="#">
+                <div class="header-info"><a class="header-info__mail" href="mailto:admin@beatu-guard.ru">admin@beatu-guard.ru</a>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:sale.basket.basket.line",
+                        "cart",
+                        Array(
+                            "HIDE_ON_BASKET_PAGES" => "Y",
+                            "PATH_TO_AUTHORIZE" => "",
+                            "PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+                            "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+                            "PATH_TO_PERSONAL" => SITE_DIR."personal/",
+                            "PATH_TO_PROFILE" => SITE_DIR."personal/",
+                            "PATH_TO_REGISTER" => SITE_DIR."login/",
+                            "POSITION_FIXED" => "N",
+                            "SHOW_AUTHOR" => "N",
+                            "SHOW_EMPTY_VALUES" => "Y",
+                            "SHOW_NUM_PRODUCTS" => "Y",
+                            "SHOW_PERSONAL_LINK" => "Y",
+                            "SHOW_PRODUCTS" => "N",
+                            "SHOW_REGISTRATION" => "Y",
+                            "SHOW_TOTAL_PRICE" => "Y"
+                        )
+                    );?>
+                    <a class="header-info__icon header-info__icon_search" href="#">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.3154 10.8016C13.7718 13.6005 15 15 15 15M6.8945 12.2014C3.63906 12.2014 1 9.69391 1 6.60072C1 3.50753 3.63906 1 6.8945 1C10.1499 1 12.789 3.50753 12.789 6.60072C12.789 9.69391 10.1499 12.2014 6.8945 12.2014Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg></a><a class="header-info__icon header-info__icon_lk header-info__icon_active" href="#">
