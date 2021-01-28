@@ -141,8 +141,12 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
                 <div class="cards-item-wrap swiper-slide" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
                     <a class="cards-item" href="<?=$arItem['ADD_URL']?>">
                         <div class="cards-item-tags">
-                            <span class="cards-item-tags-tag cards-item-tags-tag_best">Бестселлер</span>
-                            <span class="cards-item-tags-tag cards-item-tags-tag_action">Скидка 10%</span>
+                            <?if ($arItem['PROPERTIES']['UF_BEST']['VALUE']) : ?>
+                                <span class="cards-item-tags-tag cards-item-tags-tag_best">Бестселлер</span>
+                            <?endif;?>
+                            <? if ($arItem['PRICES']['BASE']['DISCOUNT_DIFF_PERCENT']) : ?>
+                                <span class="cards-item-tags-tag cards-item-tags-tag_action">Скидка <?=$arItem['PRICES']['BASE']['DISCOUNT_DIFF_PERCENT']?>%</span>
+                            <?endif;?>
                         </div>
                         <div class="cards-item__img"><img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arItem['NAME']?>"></div>
                         <div class="cards-item__title"><?=$arItem['NAME']?></div>
