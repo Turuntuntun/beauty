@@ -2,9 +2,9 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Каталог");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	"catalog", 
-	array(
+	"bitrix:catalog",
+	"catalog",
+	Array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_PICT_PROP" => "-",
@@ -27,19 +27,13 @@ $APPLICATION->SetTitle("Каталог");
 		"COMPONENT_TEMPLATE" => "catalog",
 		"CONVERT_CURRENCY" => "N",
 		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
-		"DETAIL_ADD_TO_BASKET_ACTION" => array(
-			0 => "BUY",
-		),
-		"DETAIL_ADD_TO_BASKET_ACTION_PRIMARY" => array(
-			0 => "BUY",
-		),
+		"DETAIL_ADD_TO_BASKET_ACTION" => array(0=>"BUY",),
+		"DETAIL_ADD_TO_BASKET_ACTION_PRIMARY" => array(0=>"BUY",),
 		"DETAIL_BACKGROUND_IMAGE" => "-",
 		"DETAIL_BRAND_USE" => "N",
 		"DETAIL_BROWSER_TITLE" => "-",
 		"DETAIL_CHECK_SECTION_ID_VARIABLE" => "N",
-		"DETAIL_DETAIL_PICTURE_MODE" => array(
-			0 => "MAGNIFIER",
-		),
+		"DETAIL_DETAIL_PICTURE_MODE" => array(0=>"MAGNIFIER",),
 		"DETAIL_DISPLAY_NAME" => "Y",
 		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "E",
 		"DETAIL_IMAGE_RESOLUTION" => "16by9",
@@ -64,21 +58,11 @@ $APPLICATION->SetTitle("Каталог");
 		"ELEMENT_SORT_FIELD2" => "id",
 		"ELEMENT_SORT_ORDER" => "asc",
 		"ELEMENT_SORT_ORDER2" => "desc",
-		"FILTER_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FILTER_FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_HIDE_ON_MOBILE" => "N",
 		"FILTER_NAME" => "myfilter",
-		"FILTER_PRICE_CODE" => array(
-			0 => "BASE",
-		),
-		"FILTER_PROPERTY_CODE" => array(
-			0 => "UF_CREATOR",
-			1 => "UF_COUNTRY",
-			2 => "UF_TYPE",
-			3 => "",
-		),
+		"FILTER_PRICE_CODE" => array(0=>"BASE",),
+		"FILTER_PROPERTY_CODE" => array(0=>"UF_CREATOR",1=>"UF_COUNTRY",2=>"UF_TYPE",3=>"",),
 		"FILTER_VIEW_MODE" => "VERTICAL",
 		"FORUM_ID" => "",
 		"GIFTS_DETAIL_BLOCK_TITLE" => "Выберите один из подарков",
@@ -103,8 +87,7 @@ $APPLICATION->SetTitle("Каталог");
 		"IBLOCK_TYPE" => "catalog",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"INSTANT_RELOAD" => "N",
-		"LABEL_PROP" => array(
-		),
+		"LABEL_PROP" => array(),
 		"LAZY_LOAD" => "N",
 		"LINE_ELEMENT_COUNT" => "3",
 		"LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
@@ -144,9 +127,7 @@ $APPLICATION->SetTitle("Каталог");
 		"PAGE_ELEMENT_COUNT" => "30",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PATH_TO_SMILE" => "/bitrix/images/forum/smile/",
-		"PRICE_CODE" => array(
-			0 => "BASE",
-		),
+		"PRICE_CODE" => array(0=>"BASE",),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
@@ -220,10 +201,6 @@ $APPLICATION->SetTitle("Каталог");
 		"USE_REVIEW" => "Y",
 		"USE_SALE_BESTSELLERS" => "Y",
 		"USE_STORE" => "N",
-		"VARIABLE_ALIASES" => array(
-			"ELEMENT_ID" => "ELEMENT_ID",
-			"SECTION_ID" => "SECTION_ID",
-		)
-	),
-	false
+		"VARIABLE_ALIASES" => array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID",)
+	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
