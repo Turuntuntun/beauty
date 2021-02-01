@@ -1,3 +1,8 @@
 <?
-$sSectionName="Профиль";
+
+$sSectionName = "Профиль";
+$arDirProperties = Array(
+   "title" => "Персональные данные"
+);
+
 ?>
