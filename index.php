@@ -64,7 +64,9 @@ $APPLICATION->SetTitle("Главная");?>
 	),
 	false
 );?>
-<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "main_category", Array(
+
+<?php
+$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "main_category", Array(
     "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
     "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
     "CACHE_GROUPS" => "Y",	// Учитывать права доступа
@@ -72,7 +74,7 @@ $APPLICATION->SetTitle("Главная");?>
     "CACHE_TYPE" => "A",	// Тип кеширования
     "COUNT_ELEMENTS" => "N",	// Показывать количество элементов в разделе
     "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",	// Показывать количество
-    "FILTER_NAME" => "sectionsFilter",	// Имя массива со значениями фильтра разделов
+    "FILTER_NAME" => "mainFilter",	// Имя массива со значениями фильтра разделов
     "IBLOCK_ID" => "7",	// Инфоблок
     "IBLOCK_TYPE" => "catalog",	// Тип инфоблока
     "SECTION_CODE" => "",	// Код раздела
@@ -80,7 +82,7 @@ $APPLICATION->SetTitle("Главная");?>
         0 => "",
         1 => "",
     ),
-    "SECTION_ID" => "",	// ID раздела
+    "SECTION_ID" => "23",	// ID раздела
     "SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
     "SECTION_USER_FIELDS" => array(	// Свойства разделов
         0 => "",
