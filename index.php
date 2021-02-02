@@ -415,10 +415,10 @@ $APPLICATION->SetTitle("Главная");?>
 		<div class="banner__title">
 			 Новые товары из категории индивидуальных средств защиты
 		</div>
- <a class="banner__btn btn-background" href="#">Подробнее</a>
+ <a class="banner__btn btn-background" href="/catalog">Подробнее</a>
 	</div>
 	<div class="banner-col">
- <img src="assets/images/banner2.png" alt="">
+ <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/banner2.png" alt="">
 	</div>
 </div>
  </section>
