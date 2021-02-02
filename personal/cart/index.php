@@ -2,15 +2,29 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Title");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket",
-	"bootstrap_v4",
-	Array(
+	"bitrix:sale.basket.basket", 
+	"", 
+	array(
 		"ACTION_VARIABLE" => "basketAction",
 		"ADDITIONAL_PICT_PROP_7" => "-",
 		"AUTO_CALCULATION" => "Y",
 		"BASKET_IMAGES_SCALING" => "adaptive",
-		"COLUMNS_LIST_EXT" => array("PREVIEW_PICTURE","DISCOUNT","DELETE","DELAY","TYPE","SUM"),
-		"COLUMNS_LIST_MOBILE" => array("PREVIEW_PICTURE","DISCOUNT","DELETE","DELAY","TYPE","SUM"),
+		"COLUMNS_LIST_EXT" => array(
+			0 => "PREVIEW_PICTURE",
+			1 => "DISCOUNT",
+			2 => "DELETE",
+			3 => "DELAY",
+			4 => "TYPE",
+			5 => "SUM",
+		),
+		"COLUMNS_LIST_MOBILE" => array(
+			0 => "PREVIEW_PICTURE",
+			1 => "DISCOUNT",
+			2 => "DELETE",
+			3 => "DELAY",
+			4 => "TYPE",
+			5 => "SUM",
+		),
 		"COMPATIBLE_MODE" => "Y",
 		"CORRECT_RATIO" => "Y",
 		"DEFERRED_REFRESH" => "N",
@@ -31,7 +45,7 @@ $APPLICATION->SetTitle("Title");
 		"GIFTS_SHOW_OLD_PRICE" => "N",
 		"GIFTS_TEXT_LABEL_GIFT" => "Подарок",
 		"HIDE_COUPON" => "N",
-		"LABEL_PROP" => array(),
+		"LABEL_PROP" => "",
 		"PATH_TO_ORDER" => "/personal/order/make/",
 		"PRICE_DISPLAY_MODE" => "N",
 		"PRICE_VAT_SHOW_VALUE" => "N",
@@ -42,11 +56,14 @@ $APPLICATION->SetTitle("Title");
 		"SHOW_FILTER" => "N",
 		"SHOW_RESTORE" => "Y",
 		"TEMPLATE_THEME" => "blue",
-		"TOTAL_BLOCK_DISPLAY" => array("bottom"),
+		"TOTAL_BLOCK_DISPLAY" => array(
+			0 => "bottom",
+		),
 		"USE_DYNAMIC_SCROLL" => "N",
 		"USE_ENHANCED_ECOMMERCE" => "N",
 		"USE_GIFTS" => "N",
 		"USE_PREPAYMENT" => "N",
 		"USE_PRICE_ANIMATION" => "Y"
-	)
+	),
+	false
 );?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
