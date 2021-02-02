@@ -2,9 +2,9 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Каталог");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:catalog",
-	"catalog",
-	Array(
+	"bitrix:catalog", 
+	"catalog", 
+	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_PICT_PROP" => "-",
@@ -27,13 +27,19 @@ $APPLICATION->SetTitle("Каталог");
 		"COMPONENT_TEMPLATE" => "catalog",
 		"CONVERT_CURRENCY" => "N",
 		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
-		"DETAIL_ADD_TO_BASKET_ACTION" => array(0=>"BUY",),
-		"DETAIL_ADD_TO_BASKET_ACTION_PRIMARY" => array(0=>"BUY",),
+		"DETAIL_ADD_TO_BASKET_ACTION" => array(
+			0 => "BUY",
+		),
+		"DETAIL_ADD_TO_BASKET_ACTION_PRIMARY" => array(
+			0 => "BUY",
+		),
 		"DETAIL_BACKGROUND_IMAGE" => "-",
 		"DETAIL_BRAND_USE" => "N",
 		"DETAIL_BROWSER_TITLE" => "-",
 		"DETAIL_CHECK_SECTION_ID_VARIABLE" => "N",
-		"DETAIL_DETAIL_PICTURE_MODE" => array(0=>"MAGNIFIER",),
+		"DETAIL_DETAIL_PICTURE_MODE" => array(
+			0 => "MAGNIFIER",
+		),
 		"DETAIL_DISPLAY_NAME" => "Y",
 		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "E",
 		"DETAIL_IMAGE_RESOLUTION" => "16by9",
@@ -58,11 +64,21 @@ $APPLICATION->SetTitle("Каталог");
 		"ELEMENT_SORT_FIELD2" => "id",
 		"ELEMENT_SORT_ORDER" => "asc",
 		"ELEMENT_SORT_ORDER2" => "desc",
-		"FILTER_FIELD_CODE" => array(0=>"",1=>"",),
+		"FILTER_FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "",
+		),
 		"FILTER_HIDE_ON_MOBILE" => "N",
 		"FILTER_NAME" => "myfilter",
-		"FILTER_PRICE_CODE" => array(0=>"BASE",),
-		"FILTER_PROPERTY_CODE" => array(0=>"UF_CREATOR",1=>"UF_COUNTRY",2=>"UF_TYPE",3=>"",),
+		"FILTER_PRICE_CODE" => array(
+			0 => "BASE",
+		),
+		"FILTER_PROPERTY_CODE" => array(
+			0 => "UF_CREATOR",
+			1 => "UF_COUNTRY",
+			2 => "UF_TYPE",
+			3 => "",
+		),
 		"FILTER_VIEW_MODE" => "VERTICAL",
 		"FORUM_ID" => "",
 		"GIFTS_DETAIL_BLOCK_TITLE" => "Выберите один из подарков",
@@ -87,8 +103,9 @@ $APPLICATION->SetTitle("Каталог");
 		"IBLOCK_TYPE" => "catalog",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"INSTANT_RELOAD" => "N",
-		"LABEL_PROP" => array(),
-		"LAZY_LOAD" => "N",
+		"LABEL_PROP" => array(
+		),
+		"LAZY_LOAD" => "Y",
 		"LINE_ELEMENT_COUNT" => "3",
 		"LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
 		"LINK_IBLOCK_ID" => "",
@@ -99,7 +116,7 @@ $APPLICATION->SetTitle("Каталог");
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
 		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 		"LIST_SHOW_SLIDER" => "Y",
 		"LIST_SLIDER_INTERVAL" => "3000",
 		"LIST_SLIDER_PROGRESS" => "N",
@@ -124,10 +141,12 @@ $APPLICATION->SetTitle("Каталог");
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "30",
+		"PAGE_ELEMENT_COUNT" => "9",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PATH_TO_SMILE" => "/bitrix/images/forum/smile/",
-		"PRICE_CODE" => array(0=>"BASE",),
+		"PRICE_CODE" => array(
+			0 => "BASE",
+		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
@@ -201,6 +220,38 @@ $APPLICATION->SetTitle("Каталог");
 		"USE_REVIEW" => "Y",
 		"USE_SALE_BESTSELLERS" => "Y",
 		"USE_STORE" => "N",
-		"VARIABLE_ALIASES" => array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID",)
-	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+		"LIST_PROPERTY_CODE_MOBILE" => array(
+		),
+		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(
+		),
+		"MESS_BTN_LAZY_LOAD" => "Показать ещё",
+		"VARIABLE_ALIASES" => array(
+			"ELEMENT_ID" => "ELEMENT_ID",
+			"SECTION_ID" => "SECTION_ID",
+		)
+	),
+	false
+);?>
+    <section class="banner banner_white margin-block">
+        <div class="mycontainer">
+            <div class="banner-col">
+                <div class="banner__title">Новые товары из категории индивидуальных средств защиты</div>
+                <a class="banner__btn btn-background" href="#">Подробнее</a>
+            </div>
+            <div class="banner-col"><img src="<?=SITE_TEMPLATE_PATH?>/assets/images/banner2.png" alt=""></div>
+        </div>
+    </section>
+    <section class="guarantee">
+        <div class="mycontainer">
+            <div class="title h2title">Гарантия</div>
+            <div class="guarantee-content">
+                <div class="guarantee-col">
+                    <p>Покупая средства индивидуальной защиты у нас вы можете быть уверенны в подлинности приобретаемой продукции. Мы закупаем товар только у добросоветных и проверенных производителей, которые дорожат своим именем и приобретённой репутацией </p>
+                </div>
+                <div class="guarantee-col">
+                    <p>У нас вы можете купить и заказать абсолютно любой товар из категории средств индивидуальной защиты, среди которых: маски, шапочки, перчатки, антисептики и дезинфекторы, халаты, бахилы и ещё много всего </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
